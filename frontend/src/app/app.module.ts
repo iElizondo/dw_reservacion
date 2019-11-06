@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { AdminComponent } from './componentes/admin/admin.component';
 import { ReservacionComponent } from './componentes/reservacion/reservacion.component';
-import { ConfiguracionComponent } from './componentes/configuracion/configuracion.component';
-import { AgendaComponent } from './componentes/agenda/agenda.component';
 import { ReservaComponent } from './componentes/reserva/reserva.component';
 
 @NgModule({
@@ -16,8 +14,6 @@ import { ReservaComponent } from './componentes/reserva/reserva.component';
     LoginComponent,
     AdminComponent,
     ReservacionComponent,
-    ConfiguracionComponent,
-    AgendaComponent,
     ReservaComponent
   ],
   imports: [
