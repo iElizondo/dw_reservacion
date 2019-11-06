@@ -17,16 +17,17 @@ class Usuario extends REST_Controller {
             $usuario = $this->input->post('usuario');
             $contrasena = $this->input->post('contrasena');
 
-            $data = $this->db->get_where($this->userTb,['ur_usuario' => $usuario, 
-                                                'ur_contrasena' => $contrasena]
-                                        )->row_array();
-            if($data)
-            {
-                $mensaje = 'Usuario encontrado';
-            }else
-            {
-                $mensaje = 'Usuario no encontrado';
-            }
+            $mensaje = "Usu: ". $usuario . " Contra: ". $contrasena;
+            // $data = $this->db->get_where($this->userTb,['ur_usuario' => $usuario, 
+            //                                     'ur_contrasena' => $contrasena]
+            //                             )->row_array();
+            // if($data)
+            // {
+            //     $mensaje = 'Usuario encontrado';
+            // }else
+            // {
+            //     $mensaje = 'Usuario no encontrado';
+            // }
             $this->response($mensaje, REST_Controller::HTTP_OK);
         }
 

@@ -16,17 +16,16 @@ class Reserva extends REST_Controller {
         {
             $id = $this->uri->segment(4);
 
-            echo $id;
-            // if(!empty($id)){
-            //     $data = $this->db->get_where($this->reserbaTb, ['r_id' => $id])->row_array();
-            // }else{
-            //     $data = $this->db->get($this->reserbaTb)->result();
-            // }
+            if(!empty($id)){
+                $data = $this->db->get_where($this->reserbaTb, ['r_id' => $id])->row_array();
+            }else{
+                $data = $this->db->get($this->reserbaTb)->result();
+            }
 
-            // if(!$data)
-            //     $data = 'No hay reservaciones con este ID.';
+            if(!$data)
+                $data = 'No hay reservaciones con este ID.';
 
-            // $this->response($data, REST_Controller::HTTP_OK);
+            $this->response($data, REST_Controller::HTTP_OK);
         }
 
         public function insertReserva_post()
